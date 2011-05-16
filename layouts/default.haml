@@ -1,0 +1,13 @@
+!!! 5
+%html
+  %head
+    %title Site #{@item[:title]}
+    %link{"rel" => "stylesheet", "href" => "style.css", "type" => "text/css"}
+  
+  %body
+    #main
+      :markdown
+        #{yield}
+    
+    #sidebar
+      %h2 Documentation
