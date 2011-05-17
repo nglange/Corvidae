@@ -1,0 +1,178 @@
+/**************************
+					colors 
+***************************/
+
+$bright: #CF0;
+
+/**************************
+					mixins 
+***************************/
+@mixin frameshape {
+	background: #CCC ; 
+	border-radius: 8px;
+	border: 5px solid $bright;
+	box-shadow: 5px 5px 10px #2E2E2E;
+}
+
+/* master styles :: url('http://corvuscornix.net/images/green.png') :: */
+body {
+	background: #666 ;
+	font-family: "Gentium Basic",Gentium,Palatino,Georgia,serif;
+}
+
+h2 {
+	margin: 0px 0px 0px 1em;
+	padding: 20px 0px 10px 0px;
+}
+
+h3 {
+	margin: 1em 0em -.5em 0em;
+}
+
+h4 {
+	margin: 0px 0px -10px 5px;
+}
+
+em {
+	font-weight: bold;
+	font-style: normal;
+}
+
+img {
+	/* image */
+	width: 300px;
+	height: 200px;
+	border-radius: 8px;
+}
+
+article {
+	/* basic article styling */
+	position: relative;
+	float: left;
+	background-color: #DDD;
+	position: relative;
+	float: left;
+	width: auto;
+	margin: 10px auto; 
+	padding:	0px 30px;;	
+	@include frameshape;
+}
+
+footer {
+	/* footer */
+	position: relative;
+	float: left;
+	margin: auto 150px;
+	font-style: normal;
+	font-size: 80%;
+	text-align: center;
+	color: #333;
+}
+
+#content {
+	/* main content container */
+	width: 600px;
+	margin: auto auto;
+	position: relative;
+}
+
+#image {
+	/* bird */
+	position: static;
+	float: left;
+	margin-top: 60px;
+	padding: 10px;
+	@include frameshape;
+}
+
+#intro {
+	/* quick words */
+	position: relative;
+	float: left;
+	width: auto;
+	margin: 20px auto; 
+	padding:	10px 30px;	
+	@include frameshape;
+}
+
+.title {
+	/* homepage title */
+	color: $bright;
+	margin-bottom: -10px;
+	font-size: 36pt;
+	text-shadow: 5px 5px 3px #2E2E2E;
+}
+
+.byline {
+	/*	byline */
+	margin-top: 15px;
+	color: #D3D3D3;
+}
+
+.maintitle {
+	/* header */
+	height: 100px;
+	width: 200px;
+	padding: 5px;
+	margin-left: 35px;
+	margin-top: 20px;
+	float: left;
+	text-align: center; 
+	text-shadow: #2E2E2E 5px 5px 10px;
+}
+
+.about {
+	color: #ddd;
+	text-shadow: #2E2E2E 5px 5px 5px;
+}
+
+.bar { /* nav bar for most pages */
+	float: right;
+	position: static;
+	margin: -40px 0px 10px 0px;
+	ul	{
+		/* all unordered lists */
+		list-style: none;
+	}
+	li {
+		float: left;
+		margin: 0px 5px 0px 5px;
+		a {
+			padding: 5px 5px 15px 5px;
+			font-weight: bold;
+			color: $bright;
+			text-shadow: #2E2E2E 5px 5px 5px;
+		&:hover {
+			color: #eee ;
+			background: rgba(255,255,255, 0.15);
+		}
+	}
+}
+}
+
+.home { /* nav links by picture on homepage */
+	position: static;
+	float: left; 
+	margin: 15px 0px 0px 50px;
+	ul {
+		/* link container */
+		text-align: left;
+		list-style: none;
+	}
+	li {
+		/* link? */
+		font-size: 100%;;
+		margin-bottom: 8px;
+		a {
+			/* links */
+			margin-bottom: 10px;
+			color: $bright;
+			padding: 6px;
+			text-shadow: #2E2E2E 5px 5px 5px;
+		&:hover {
+			color: #eee ;
+			background: rgba(255,255,255, 0.15);
+			}
+		}
+	}
+}
