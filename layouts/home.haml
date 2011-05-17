@@ -1,0 +1,23 @@
+!!! 5
+%html
+  %head
+    %title Corvid&#xe6; #{@item[:title]}
+    %link{"rel" => "stylesheet", "href" => "style.css", "type" => "text/css"}
+  %body
+    #content
+      #image
+        %img(src="images/raven.gif" alt="Ink painting of a raven")
+      %header.maintitle
+        %h1.title Corvid&#xe6;
+        %h4.byling by Nicholas Lange
+      %nav.home
+        %ul
+          %li= link_to "Weblog", "blog/"
+          %li= link_to "Resume", "resume/"
+          %li= link_to "Links", "links/"
+          %li= link_to "Colophon", "colophon/"
+      %section#intro
+        :markdown
+          #{yield}
+      %footer
+        %p Created by Nicholas Lange.  All rights reserved.  Copyright May 2011.

@@ -16,7 +16,7 @@ end
 
 compile '*' do
   filter :erb
-  layout 'default'
+  layout 'home'
 end
 
 route '/stylesheet/' do
@@ -27,4 +27,4 @@ route '*' do
   item.identifier + 'index.html'
 end
 
-layout '*', :erb
+layout '*', :haml
